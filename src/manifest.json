@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Chrome Formular Manager",
+    "description": "Manage Form data",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "images/16.png",
+            "32": "images/32.png",
+            "48": "images/48.png"
+        },
+        "default_title": "Forms found",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "images/disabled_16.png",
+        "32": "images/disabled_32.png",
+        "48": "images/disabled_48.png"
+    },
+    "permissions": ["tabs", "storage"]
+}

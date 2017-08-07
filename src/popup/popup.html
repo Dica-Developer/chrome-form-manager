@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Popup</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="popup.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone">
+                    <select id="presets" class="mdc-select"></select>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--align-right">
+                    <button type="button" id="apply" class="mdc-button mdc-button--primary mdc-button--raised mdc-button--compact mdc-button--dense" disabled>Apply</button>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone">
+                    <label for="name">Name:</label>
+                    <div class="mdc-textfield mdc-textfield--fullwidth mdc-textfield--upgraded mdc-textfield--dense">
+                        <input type="text" class="mdc-textfield__input" id="name" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone">
+                    <label for="description">Description:</label>
+                    <div class="mdc-textfield mdc-textfield--multiline">
+                        <textarea class="mdc-textfield__input" id="description" rows="5" cols="60"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone">
+                    <button type="button" class="mdc-button mdc-button--compact mdc-button--dense" id="clear">Clear</button>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone">
+                    <button type="button" class="mdc-button mdc-button--compact mdc-button--dense" id="delete">Delete</button>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone">
+                    <button type="button" class="mdc-button mdc-button--compact mdc-button--dense" id="update">Update</button>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--align-right">
+                    <button type="button" id="save" class="mdc-button mdc-button--raised mdc-button--compact mdc-button--dense">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
+
