@@ -1,9 +1,10 @@
 {
-  "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["chrome > 50"]
-      }
-    }]
-  ]
+    "plugins": ['babel-plugin-transform-object-rest-spread'],
+    "presets": [
+        ["env", {
+            "targets": {
+                "chrome": 60
+            }
+        }]
+    ]
 }
