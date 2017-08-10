@@ -70,14 +70,6 @@ function getConf() {
     };
 
     if (IS_DIST) {
-        config.plugins.push(
-            new webpack.optimize.UglifyJsPlugin({
-                compress: {
-                    warnings: false,
-                    drop_console: false,
-                }
-              }),
-        )
     }
 
     return config;
