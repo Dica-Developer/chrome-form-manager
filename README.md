@@ -10,7 +10,7 @@ This is an early beta under heavy development stage. For now no actual extension
 In order to install it in chrome you need to checkout project first.
 
 ```bash
-$ git clone git@github.com/Dica-Developer/chrome-form-manager
+$ git clone git@github.com:Dica-Developer/chrome-form-manager.git
 ```
 
 cd into the project folder
