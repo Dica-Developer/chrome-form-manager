@@ -37,3 +37,17 @@ Make sure to enable developer mode, checkbox top right and click `Load unpacked 
 Browse to `dist`folder of chrome-form-manager and hit ok.
 
 If everything worked well you should end up with a new icon next to the browser URL input.
+
+## use it?
+
+### New preset
+
+If you're on a page with a formular you want to save the values typed in.
+Just hit the icon of the extension and the popup will popup. ;)
+
+Type in a name (required), a description (optional) and hit save.
+The nex time you open the popup the new preset you be availabe in the select box.
+
+### Apply preset
+
+
