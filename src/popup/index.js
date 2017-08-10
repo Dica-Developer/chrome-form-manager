@@ -1,6 +1,6 @@
 import Api from '../lib/Api';
 import Ui from '../lib/Ui';
-import './popup.less';
+import './popup.scss';
 
 let tabInfo = null;
 let presets = {};

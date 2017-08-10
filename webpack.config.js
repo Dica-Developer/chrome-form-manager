@@ -6,7 +6,7 @@ const SRC = path.resolve(__dirname, 'src');
 const DIST = path.resolve(__dirname, 'dist');
 const IS_DIST = process.env.NODE_ENV === "production";
 
-const extractLess = new ExtractTextPlugin({
+const extractSass = new ExtractTextPlugin({
     filename: '[name].css'
 });
 
@@ -29,29 +29,44 @@ function getConf() {
             rules: [
                 {
                     test: /\.js$/,
-                    exclude: /node_modules/,
                     use: {
                         loader: 'babel-loader'
                     }
                 },
                 {
-                    test: /\.less/,
-                    exclude: /node_modules/,
-                    use: extractLess.extract({
+                    test: /\.scss/,
+                    use: extractSass.extract({
                         use: [{
-                            loader: 'css-loader'
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: false
+                            }
                         },
                         {
-                            loader: 'less-loader',
+                            loader: 'postcss-loader',
                             options: {
-                                plugins: [ new CleanCSSPlugin() ]
+                                sourceMap: false,
+                                plugins: () => [
+                                    require('autoprefixer')(),
+                                    require('cssnano')()
+                                ]
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                sourceMap: false,
+                                includePaths: [
+                                    'node_modules',
+                                    'node_modules/normalize-scss/sass'
+                                ]
                             }
                         }]
                     })
                 }
             ]
         },
-        plugins: [extractLess]
+        plugins: [extractSass]
     };
 
     if (IS_DIST) {
