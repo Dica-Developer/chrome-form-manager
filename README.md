@@ -3,6 +3,11 @@
 Chrome extension to manage multiple form presets for static html formulars.
 Presets are stored per URL with uniqe name.
 
+Required:
+
+`node >= v6.0.0`
+`npm >= v5.0.0`
+
 ## HOW TO
 
 ### install?
@@ -28,7 +33,7 @@ $ npm install
 run the build script
 
 ```bash
-$ npm run build
+$ npm run dist
 ```
 
 After the build finished you will have a new folder `dist`.
