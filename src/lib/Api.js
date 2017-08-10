@@ -45,7 +45,7 @@ class Api {
     }
 
     hasPresets() {
-        return Object.keys(this.presets).length > 0;
+        return this.presets && Object.keys(this.presets).length > 0;
     }
 
     getPreset() {
